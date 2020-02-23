@@ -23,22 +23,20 @@ public class BST<T, E extends Comparable> implements BSTInterface<T, E>  {
 			root = new BSTNode<T, E>(key, value);
 		}
 		else{
-			BSTNode<T, E> temp = root;
-			loop: while (true){
-				if(temp.value > value){
-					if(temp.left == null){
-						temp.left = new BSTNode<T, E>(key, value);
-						break loop;
-					}
+			BSTNode<T, E> temp = null;
+			if(value > root.value)
+				temp = root.right;
+			else
+				temp = root.left;
+			while(true){
+				if(temp == null){
+					temp = new BSTNode<T, E>(key, value);
+					break;
+				}
+				else if(temp.value > value)
 					temp = temp.left;
-				}
-				else{
-					if(temp.right == null){
-						temp.right = new BSTNode<T, E>(key, value);
-						break loop;
-					}
+				else
 					temp = temp.right;
-				}
 			}
 		}
 
