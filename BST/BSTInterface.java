@@ -1,5 +1,5 @@
 package col106.assignment3.BST ;
-public interface BSTInterface <T, E extends Comparable>{
+public interface BSTInterface <T extends Comparable, E extends Comparable>{
 /**
 * Insert an element using the "key" as the key and the
 corresponding value .

@@ -1,5 +1,6 @@
-package col106.assignment3.Heap ;
-public interface HeapInterface <T, E extends Comparable>{
+package col106.assignment3.Heap;
+
+public interface HeapInterface <T extends Comparable, E extends Comparable>{
 /**
 * Insert an element using the "key" as the key and the
 corresponding value into the binary max heap.

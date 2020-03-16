@@ -40,7 +40,7 @@ public class ElectionDriverCode {
                 switch (st.trim()) {
                     case "INSERT":
                         String[] info = br.readLine().split(",");
-                        System.out.println("Inserting: " + info[0].trim() + ", " + info[1].trim() + ", " + info[2].trim() + ", " + info[3].trim() + ", " + info[4].trim()  + ", " + info[5].trim()  + ", " + info[6].trim()); 
+                        System.out.println("Inserting: " + info[0].trim() + ", " + info[1].trim() + ", " + info[2].trim() + ", " + info[3].trim() + ", " + info[4].trim()  + ", " + info[5].trim()  + ", " + info[6].trim());
                         election.insert(info[0].trim(), info[1].trim(), info[2].trim(), info[3].trim(), info[4].trim(), info[5].trim(),info[6].trim()); //TO Do
                         break;
 
@@ -49,7 +49,7 @@ public class ElectionDriverCode {
                         System.out.println("Updating "+ update_term[0].trim()+ ", " + update_term[1].trim()+ ", " + update_term[2].trim()+ ":"); //name, candID, votes
                         election.updateVote(update_term[0].trim(), update_term[1].trim(), update_term[2].trim());
                         break;
-		    
+
 				    case "TOP k IN CONSTITUENCY":
 						str = br.readLine().split(",");
 						System.out.println("Reporting Top "+str[1].trim()+" in constituency " + str[0].trim()+ ":");
@@ -75,7 +75,6 @@ public class ElectionDriverCode {
                         election.voteShareInState(str[0].trim(),str[1].trim());
                         break;
 			    	case "PRINT":
-			    		str = br.readLine().split(",");
 			    		System.out.println("Printing Election data:");
 			    		election.printElectionLevelOrder();
 			    		break;
